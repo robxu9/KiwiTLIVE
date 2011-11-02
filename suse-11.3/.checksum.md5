@@ -1,0 +1,6 @@
+652b64a4a5263497bfd3385e9336b672  ./config.sh
+3144ab2e3d2cd0f0689b530cb6101af6  ./root/etc/modprobe.conf.local
+da2f2ed6217a69713e28f0c3210525b7  ./root/preinit
+3c83fe49c74e13da859679fab4f0e8c0  ./root/linuxrc
+6c772a5e654a1b905d802d5bc99531a5  ./images.sh
+aff5dc672ff83d6acda70185e262c13c  ./config.xml
