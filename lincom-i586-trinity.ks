@@ -7,12 +7,12 @@
 
 lang en_US.UTF-8
 keyboard us
-timezone --utc America/Los_Angeles
+timezone --utc America/New_York
 part / --size 1700 --ondisk sda --fstype=ext3
-rootpw meego 
+rootpw lincom
 bootloader  --timeout=0  --append="quiet"   
 
-user --name meego  --groups audio,video --password meego 
+user --name lincom  --groups audio,video --password lincom
 
 #repo --name=oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/@BUILD_ID@/repos/oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
 #repo --name=non-oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/@BUILD_ID@/repos/non-oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
