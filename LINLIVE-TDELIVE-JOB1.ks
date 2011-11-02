@@ -14,8 +14,11 @@ bootloader  --timeout=0  --append="quiet"
 
 user --name meego  --groups audio,video --password meego 
 
-repo --name=oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/@BUILD_ID@/repos/oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
-repo --name=non-oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/@BUILD_ID@/repos/non-oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
+#repo --name=oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/@BUILD_ID@/repos/oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
+#repo --name=non-oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/@BUILD_ID@/repos/non-oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
+
+repo --name=oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/latest/repos/oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
+repo --name=non-oss --baseurl=http://repo.meego.com/MeeGo/builds/trunk/latest/repos/non-oss/ia32/packages/ --save --debuginfo --source --gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-meego
 
 %packages
 
