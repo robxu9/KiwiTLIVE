@@ -1,0 +1,18 @@
+#!/bin/bash
+
+
+export NAME=trinity-$barch
+cd $WORKSPACE
+
+echo "STARTING $NAME PREP"
+if [ "$barch" == "i586" ]; then
+linux32 mic-image-creator --build-bootstrap --bootstrap=imgbootstrap/ --format=livecd --config=$NAME.ks --prefix=lincom --suffix=$BUILD_NUMBER --cache=imagecache/ --genchecksum --include-source --release=nightly --arch=$barch
+else
+mic-image-creator --build-bootstrap --bootstrap=imgbootstrap/ --format=livecd --config=$NAME.ks --prefix=lincom --suffix=$BUILD_NUMBER --cache=imagecache/ --genchecksum --include-source --release=nightly --arch=$barch
+fi
+
+echo "STARTING $NAME RENAME"
+cd nightly/images/*
+ls -d *.img | sed 's/\(.*\).img$/mv "&" "\1.iso"/' | sh
+
+echo "FINISHED $NAME BUILD"
